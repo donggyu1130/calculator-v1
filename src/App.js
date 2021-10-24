@@ -18,7 +18,10 @@ function App() {
   function number2Click() {
     setNumber(2);
   }
-
+  
+  /**
+   * 연산버튼=을 클릭했을때 인풋안에 연산 결과를 출력
+   */
   function equalClick() {
     setNumber(3);
   }
