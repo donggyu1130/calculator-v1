@@ -13,7 +13,7 @@ function App() {
   }
 
   /**
-   * 숫자버튼2를 클릭했을때 2를 출력
+   * 숫자버튼2를 클릭했을때 인풋안에 2를 출력
    */
   function number2Click() {
     setNumber(2);
