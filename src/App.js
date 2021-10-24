@@ -19,13 +19,17 @@ function App() {
     setNumber(2);
   }
 
+  function equalClick() {
+    setNumber(3);
+  }
+
   return (
     <div>
       <input type="number" value={number}/>
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button>+</button>
-      <button>=</button>
+      <button onClick={equalClick}>=</button>
     </div>
   );
 }
