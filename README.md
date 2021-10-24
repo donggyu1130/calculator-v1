@@ -1,6 +1,18 @@
 # calculator-v1
 
 계산기 만들기
+1.화면을 그린다(완료)
+=>1-1.숫자가 보이는 창
+
+  1-2.숫자버튼1
+
+  1-3.숫자버튼2
+
+  1-4.연산버튼+
+
+  1-5.연산버튼=
+
+2
 
 # Getting Started with Create React App
 
