@@ -3,8 +3,10 @@ import {useState} from "react";
 function App() {
 
   const [number,setNumber]=useState(0);
+  //number는 인풋안에 출력되는 값이다
+
   /**
-   * 숫자버튼1을 클릭했을때 1을 출력
+   * 숫자버튼1을 클릭했을때 인풋안에 1을 출력
    */
   function number1Click() {
     setNumber(1);
