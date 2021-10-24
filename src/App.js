@@ -1,10 +1,13 @@
+import {useState} from "react";
+
 function App() {
 
+  const [number,setNumber]=useState(0);
   /**
    * 숫자버튼1을 클릭했을때 1을 출력
    */
   function number1Click() {
-    alert('1');
+    setNumber(1);
   }
 
   /**
@@ -16,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <input type="number"/>
+      <input type="number" value={number}/>
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button>+</button>
