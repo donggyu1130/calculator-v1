@@ -17,6 +17,9 @@
 
 =>2-1.숫자버튼1을 누르면 alert으로 숫자1이 뜨게한다
 
+3.2번에 대한 코드개선
+=>익명함수를 일반함수로 개선
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
