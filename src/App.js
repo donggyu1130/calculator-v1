@@ -16,7 +16,7 @@ function App() {
    * 숫자버튼2를 클릭했을때 2를 출력
    */
   function number2Click() {
-    alert('2');
+    setNumber(2);
   }
 
   return (
