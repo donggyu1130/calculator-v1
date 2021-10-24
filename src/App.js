@@ -1,19 +1,24 @@
 function App() {
+
   /**
-   * 숫자버튼을 클릭했을때 해당 숫자를 출력
+   * 숫자버튼1을 클릭했을때 1을 출력
    */
-  function numberClick() {
+  function number1Click() {
     alert('1');
   }
-  function numberClick2() {
+
+  /**
+   * 숫자버튼2를 클릭했을때 2를 출력
+   */
+  function number2Click() {
     alert('2');
   }
 
   return (
     <div>
       <input type="number"/>
-      <button onClick={numberClick}>1</button>
-      <button onClick={numberClick2}>2</button>
+      <button onClick={number1Click}>1</button>
+      <button onClick={number2Click}>2</button>
       <button>+</button>
       <button>=</button>
     </div>
