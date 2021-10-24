@@ -5,12 +5,15 @@ function App() {
   function numberClick() {
     alert('1');
   }
+  function numberClick2() {
+    alert('2');
+  }
 
   return (
     <div>
       <input type="number"/>
       <button onClick={numberClick}>1</button>
-      <button>2</button>
+      <button onClick={numberClick2}>2</button>
       <button>+</button>
       <button>=</button>
     </div>
