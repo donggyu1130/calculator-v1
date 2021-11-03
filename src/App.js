@@ -23,7 +23,11 @@ function App() {
       setLastbutton(1);
     }else {
       setNumber(1);
-      setConclusion(Number(conclusion)+1);
+      setConclusion(Number(conclusion)+1);//+가 눌린 이후에 1을 누르니 11에 더해져 12가 되버렸다
+      //:진짜 문제는 우리는 지금 실제 계산기랑 또는 공책에 계산할때랑 다르게 만들고있기 때문이다
+      //공책에 11+11을 계산할때:11을 쓴다>11을 또 쓴다>계산할떄 눈앞의 숫자 2개를 더한다
+      //우리는 지금 공책으로 치면 11을 쓴다음 11을 지우고 12로 고쳐쓰고있다
+      //변수를 2개쓴다:+눌리기 전에는 첫번째,눌린이후에는2번째 변수를 쓴다 마지막에=을 하면 그때 더한다
       setLastbutton(1);
     }
   }
