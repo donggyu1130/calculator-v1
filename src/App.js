@@ -7,14 +7,25 @@ function App() {
 
   const [conclusion,setConclusion]=useState(0);
   //conclusion은 결과로 출력될 값이다
+
+  const [lastbutton,setLastbutton]=useState(0);
   
   /**
    * 숫자버튼1을 클릭했을때 인풋안에 1을 출력
    * conslusion에 1을 더해준다
    */
   function number1Click() {
-    setNumber(1);
-    setConclusion(conclusion+1);
+    if (lastbutton==1) {
+      console.log('처음'+conclusion);
+      setConclusion(conclusion+'1');
+      console.log('나중'+conclusion);
+      setNumber(11);
+    }else {
+      setNumber(1);
+      setConclusion(conclusion+1);
+      setLastbutton(1);
+    }
+    
   }
 
   /**
@@ -24,6 +35,7 @@ function App() {
   function number2Click() {
     setNumber(2);
     setConclusion(conclusion+2);
+    setLastbutton(2);
   }
 
   /**
@@ -33,6 +45,10 @@ function App() {
   function number3Click() {
     setNumber(3);
     setConclusion(conclusion+3);
+    setLastbutton(3);
+  }
+  function plusClick() {
+    setLastbutton('+');
   }
   
   /**
@@ -40,6 +56,7 @@ function App() {
    */
   function equalClick() {
     setNumber(conclusion);
+    setLastbutton('3');
   }
 
   return (
@@ -48,7 +65,7 @@ function App() {
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button onClick={number3Click}>3</button>
-      <button>+</button>
+      <button onClick={plusClick}>+</button>
       <button onClick={equalClick}>=</button>
     </div>
   );
