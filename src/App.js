@@ -25,6 +25,11 @@ function App() {
     setNumber(2);
     setConclusion(conclusion+2);
   }
+
+  /**
+   * 숫자버튼3을 클릭했읋때 인풋안에 3을 출력
+   * conclusion에 3을 더해준다
+   */
   function number3Click() {
     setNumber(3);
     setConclusion(conclusion+3);
