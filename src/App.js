@@ -34,7 +34,7 @@ function App() {
    */
   function number2Click() {
     setNumber(2);
-    setConclusion(conclusion+2);
+    setConclusion(Number(conclusion)+2);
     setLastbutton(2);
   }
 
