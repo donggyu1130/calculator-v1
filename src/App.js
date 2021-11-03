@@ -5,11 +5,15 @@ function App() {
   const [number,setNumber]=useState(0);
   //number는 인풋안에 출력되는 값이다
 
+  const [conclusion,setConclusion]=useState(0);
+  
+  
   /**
    * 숫자버튼1을 클릭했을때 인풋안에 1을 출력
    */
   function number1Click() {
     setNumber(1);
+    setConclusion(conclusion+1);
   }
 
   /**
@@ -17,13 +21,14 @@ function App() {
    */
   function number2Click() {
     setNumber(2);
+    setConclusion(conclusion+2);
   }
   
   /**
    * 연산버튼=을 클릭했을때 인풋안에 연산 결과를 출력
    */
   function equalClick() {
-    setNumber(3);
+    setNumber(conclusion);
   }
 
   return (
