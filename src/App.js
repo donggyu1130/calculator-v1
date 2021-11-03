@@ -17,12 +17,12 @@ function App() {
    * 숫자버튼1을 클릭했을때 lastbutton에 1을 넣어준다
    */
   function number1Click() {
-    if (lastbutton==1) {
+    if (lastbutton===1) {
       setConclusion(conclusion+'1');
       setNumber(conclusion+'1');
     }else {
       setNumber(1);
-      setConclusion(conclusion+1);
+      setConclusion(Number(conclusion)+1);
       setLastbutton(1);
     }
   }
