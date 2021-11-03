@@ -25,6 +25,10 @@ function App() {
     setNumber(2);
     setConclusion(conclusion+2);
   }
+  function number3Click() {
+    setNumber(3);
+    setConclusion(conclusion+3);
+  }
   
   /**
    * 연산버튼=을 클릭했을때 conclusion값을 인풋안에 연산 결과로 출력
@@ -38,6 +42,7 @@ function App() {
       <input type="number" value={number}/>
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
+      <button onClick={number3Click}>3</button>
       <button>+</button>
       <button onClick={equalClick}>=</button>
     </div>
