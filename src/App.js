@@ -18,10 +18,12 @@ function App() {
    */
   function number1Click() {
     if (lastbutton==1) {
+      let con2=0;
       console.log('처음'+conclusion);
       setConclusion(conclusion+'1');
       console.log('나중'+conclusion);
-      setNumber(11);
+      con2=conclusion
+      setNumber(con2+'1');
     }else {
       setNumber(1);
       setConclusion(conclusion+1);
