@@ -33,9 +33,14 @@ function App() {
    * 숫자버튼2를 클릭했을때 lastbutton에 2를 넣어준다
    */
   function number2Click() {
-    setNumber(2);
-    setConclusion(Number(conclusion)+2);
-    setLastbutton(2);
+    if (lastbutton===2) {
+      setConclusion(conclusion+'2');
+      setNumber(conclusion+'2');
+    }else {
+      setNumber(2);
+      setConclusion(Number(conclusion)+2);
+      setLastbutton(2);
+    }
   }
 
   /**
