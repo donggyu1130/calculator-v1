@@ -6,10 +6,10 @@ function App() {
   //number는 인풋안에 출력되는 값이다
 
   const [conclusion1,setConclusion1]=useState(0);
-  //conclusion은 더하기 이전의 저장되는 값이다
+  //conclusion1은 더하기 이전의 저장되는 값이다
 
   const [conclusion2,setConclusion2]=useState(0);
-  //conclusion은 더하기 이후의 저장되는 값이다
+  //conclusion2은 더하기 이후의 저장되는 값이다
 
   const [lastbutton,setLastbutton]=useState('NONE');
   //가장 최근에 클릭된 버튼이 저장된다
@@ -62,7 +62,7 @@ function App() {
    */
   function number2Click() {
     if(plusclicked) {
-      
+
       if (typeof lastbutton==='number') {//if를 쓰는 이유:이전에 눌렸던 버튼이 숫자였는지 확인하기 위해서이다
         //lastbutton이 1인지 2인지 확인하는게 아니라 +가 눌렸는지 아닌지를 판별해야한다
         setConclusion2(conclusion2+'2');
@@ -101,6 +101,7 @@ function App() {
 
   /**
    * 연산버튼+를 클릭했을때 lastbutton에 +라는 값을 넣어준다
+   * 숫자버튼을 여러번눌러 2자리수 이상을 만들때 구분을 해준다
    */
   function plusClick() {
     setLastbutton('+');
@@ -110,6 +111,7 @@ function App() {
   /**
    * 연산버튼=을 클릭했을때 conclusion값을 인풋안에 연산 결과로 출력
    * 연산버튼+를 클릭했을때 lastbutton에 =이라는 값을 넣어준다
+   * conslusion1과conslusion2를 더해준다
    */
   function equalClick() {
     setNumber(Number(conclusion1)+Number(conclusion2));
