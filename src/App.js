@@ -62,6 +62,7 @@ function App() {
    */
   function number2Click() {
     if(plusclicked) {
+      
       if (typeof lastbutton==='number') {//if를 쓰는 이유:이전에 눌렸던 버튼이 숫자였는지 확인하기 위해서이다
         //lastbutton이 1인지 2인지 확인하는게 아니라 +가 눌렸는지 아닌지를 판별해야한다
         setConclusion2(conclusion2+'2');
@@ -72,7 +73,6 @@ function App() {
         setConclusion2(Number(conclusion2)+2);
         setLastbutton(1);
       }
-
 
     }else{
       if (typeof lastbutton==='number') {
