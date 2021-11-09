@@ -57,24 +57,34 @@ function App() {
 
   /**
    * 숫자버튼2를 클릭했을때 인풋안에 2를 출력
-   * conslusion에 2를 더해준다
+   * conslusion에 2를 더해준다(O)
    * 숫자버튼2를 클릭했을때 lastbutton에 2를 넣어준다
    */
   function number2Click() {
-    // console.log(lastbutton);//lastbutton값은1
-    // console.log(!lastbutton==='+');//false:!(not연산자)는 lastbutton이라는 변수의 값만 not으로 취한다
-    // console.log(lastbutton==='+');//false
-    // console.log(!(lastbutton==='+'));//true:!(not 연산자)는 바로 뒤에있는 값을 not으로 취한다
-    // console.log(lastbutton!=='+');//true:!==, !=(같지 않다 비교 연산자)
-    if (typeof lastbutton==='number') {//if를 쓰는 이유:이전에 눌렸던 버튼이 숫자였는지 확인하기 위해서이다
-      //lastbutton이 1인지 2인지 확인하는게 아니라 +가 눌렸는지 아닌지를 판별해야한다
-      setConclusion1(conclusion1+'2');
-      setNumber(conclusion1+'2');
-      setLastbutton(1);
-    }else {
-      setNumber(2);
-      setConclusion1(Number(conclusion1)+2);
-      setLastbutton(1);
+    if(plusclicked) {
+      if (typeof lastbutton==='number') {//if를 쓰는 이유:이전에 눌렸던 버튼이 숫자였는지 확인하기 위해서이다
+        //lastbutton이 1인지 2인지 확인하는게 아니라 +가 눌렸는지 아닌지를 판별해야한다
+        setConclusion2(conclusion2+'2');
+        setNumber(conclusion2+'2');
+        setLastbutton(1);
+      }else {
+        setNumber(2);
+        setConclusion2(Number(conclusion2)+2);
+        setLastbutton(1);
+      }
+
+
+    }else{
+      if (typeof lastbutton==='number') {
+        setConclusion1(conclusion1+'2');
+        setNumber(conclusion1+'2');
+        setLastbutton(1);
+      }else {
+        setNumber(2);
+        setConclusion1(Number(conclusion1)+2);
+        setLastbutton(1);
+      }
+
     }
   }
 
