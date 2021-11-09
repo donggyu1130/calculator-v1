@@ -106,6 +106,7 @@ function App() {
   function plusClick() {
     setLastbutton('+');
     setPlusclicked(true);
+    setNumber(Number(conclusion1)+Number(conclusion2));
   }
   
   /**
