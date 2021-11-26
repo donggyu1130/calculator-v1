@@ -1,8 +1,71 @@
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react'
 import App from './App';
 
-test('renders learn react link', () => {
+test('시나리오 6번', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // #17: App 이라는 react 컴포넌트를 그려라!
+
+  const button1 = screen.getByText(1);
+  // #20: 화면에, 글자 1이 담긴 HTML 태그가 있다. 
+  // 그걸 button1이라고 부르겠다!
+  expect(button1).toBeInTheDocument();
+  // #23: expect, 예상하건데, 기대하건데 (=테스트 과정)
+  // button1이, html 문서에 있을 것이다!
+
+  const number = screen.getByRole('number');
+  // #27: 화면에 있는 HTML 태그중에 role="number" 라는게 있다.
+  // 그걸 number라고 부르겠다!
+  expect(number).toBeInTheDocument();
+  // #30: 마찬가지로, 예상컨데, number가 html 문서에 있을 것이다!
+
+  fireEvent.click(button1);
+  // #33: fireEvent=이벤트를 발생시켜라
+  // 어떤 이벤트? click 이벤트를 발생시켜라
+  // 어디에? button1에 click 이벤트를 발생시켜라!
+  expect(number).toHaveValue(1);
+  // #37: 기대하건데, number는 value가 1이 되어 있을 것이다!
+});
+
+test('시나리오 8번', () => {
+  render(<App />);
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+});
+
+test('시나리오 10번', () => {
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(3);
 });
