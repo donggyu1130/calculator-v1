@@ -69,3 +69,420 @@ test('시나리오 10번', () => {
   fireEvent.click(buttonEqual);
   expect(number).toHaveValue(3);
 });
+
+test('시나리오 12번', ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1)
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(2);
+
+});
+
+test('시나리오 14번',()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(4);
+})
+
+test('시나리오 17번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+});
+
+test('시나리오 19번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111);
+}); 
+
+test('시나리오 21번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(12);
+}); 
+
+test('시나리오 22번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(13);
+}); 
+
+test('시나리오 23번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22);
+
+});
+
+test('시나리오 24번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(12);
+
+});
+
+test('시나리오 26번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(21);
+
+});
+
+test('시나리오 27번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(21);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(212);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(2121);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(2121);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(2122);
+});
+
+test('시나리오 28번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(22);
+
+});
+
+test('시나리오 29번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(112);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(112);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(221);
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(333);
+
+});
+
+test('시나리오 31번' , ()=>{
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(2);
+
+});

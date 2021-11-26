@@ -123,7 +123,7 @@ function App() {
 
   return (
     <div>
-      <input type="number" value={number}/>
+      <input type="number" role="number" value={number}/>
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button onClick={number3Click}>3</button>
