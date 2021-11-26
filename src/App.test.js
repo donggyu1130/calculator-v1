@@ -568,3 +568,17 @@ test('시나리오 34번' , ()=>{
   expect(number).toHaveValue(7);
 
 });
+
+test('시나리오 35번' , ()=>{
+  render(<App />);
+
+  const button3 = screen.getByText(3);
+  expect(button3).toBeInTheDocument();
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button3);
+  expect(number).toHaveValue(3);
+
+});
