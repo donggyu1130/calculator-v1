@@ -693,3 +693,44 @@ test('시나리오 35번' , ()=>{
     expect(number).toHaveValue(9);
 
   });
+
+  test('시나리오 39번' , ()=>{
+    render(<App />);
+  
+    const button1 = screen.getByText(1);
+    expect(button1).toBeInTheDocument();
+  
+    const button2 = screen.getByText(2);
+    expect(button2).toBeInTheDocument();
+
+    const button3 = screen.getByText(3);
+    expect(button3).toBeInTheDocument();
+  
+    const buttonPlus = screen.getByText('+');
+    expect(buttonPlus).toBeInTheDocument();
+  
+    const buttonEqual = screen.getByText('=');
+    expect(buttonEqual).toBeInTheDocument();
+  
+    const number = screen.getByRole('number');
+    expect(number).toBeInTheDocument();
+  
+    fireEvent.click(button3);
+    expect(number).toHaveValue(3);
+  
+    fireEvent.click(buttonPlus);
+    expect(number).toHaveValue(3);
+  
+    fireEvent.click(button2);
+    expect(number).toHaveValue(2);
+  
+    fireEvent.click(buttonPlus);
+    expect(number).toHaveValue(5);
+  
+    fireEvent.click(button1);
+    expect(number).toHaveValue(1);
+  
+    fireEvent.click(buttonEqual);
+    expect(number).toHaveValue(6);
+
+  });
