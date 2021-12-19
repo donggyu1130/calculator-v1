@@ -84,7 +84,6 @@ function App() {
         setConclusion1(Number(conclusion1)+2);
         setLastbutton(1);
       }
-
     }
   }
 
@@ -93,10 +92,31 @@ function App() {
    * conclusion에 3을 더해준다
    * 숫자버튼3을 클릭했을때 lastbutton에 3을 넣어준다
    */
-  function number3Click() {
-    setNumber(3);
-    setConclusion1(conclusion1+3);
-    setLastbutton(3);
+   function number3Click() {
+    if(plusclicked) {
+
+      if (typeof lastbutton==='number') {//if를 쓰는 이유:이전에 눌렸던 버튼이 숫자였는지 확인하기 위해서이다
+        //lastbutton이 1인지 2인지 확인하는게 아니라 +가 눌렸는지 아닌지를 판별해야한다
+        setConclusion2(conclusion2+'3');
+        setNumber(conclusion2+'3');
+        setLastbutton(1);
+      }else {
+        setNumber(3);
+        setConclusion2(Number(conclusion2)+3);
+        setLastbutton(1);
+      }
+
+    }else{
+      if (typeof lastbutton==='number') {
+        setConclusion1(conclusion1+'3');
+        setNumber(conclusion1+'3');
+        setLastbutton(3);
+      }else {
+        setNumber(3);
+        setConclusion1(Number(conclusion1)+3);
+        setLastbutton(1);
+      }
+    }
   }
 
   /**
