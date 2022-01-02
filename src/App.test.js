@@ -781,3 +781,20 @@ test('시나리오 35번' , ()=>{
     expect(number).toHaveValue(10);
 
   });
+
+  test('시나리오 42번' , ()=>{
+    render(<App />);
+
+    const button3 = screen.getByText(3);
+    expect(button3).toBeInTheDocument();
+
+    const number = screen.getByRole('number');
+    expect(number).toBeInTheDocument();
+  
+    fireEvent.click(button3);
+    expect(number).toHaveValue(3);
+
+    fireEvent.click(button3);
+    expect(number).toHaveValue(33);
+
+  });
