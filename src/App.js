@@ -144,6 +144,7 @@ function App() {
       <button onClick={number2Click}>2</button>
       <button onClick={number3Click}>3</button>
       <button onClick={plusClick}>+</button>
+      <button>-</button>
       <button onClick={equalClick}>=</button>
     </div>
   );

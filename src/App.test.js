@@ -920,3 +920,10 @@ test("시나리오 44번", () => {
   fireEvent.click(buttonEqual);
   expect(number).toHaveValue(4);
 });
+
+test("시나리오 45번", () => {
+  render(<App />);
+
+  const buttonMinus = screen.getByText("-");
+  expect(buttonMinus).toBeInTheDocument();
+});
