@@ -139,7 +139,11 @@ function App() {
 
   return (
     <div>
-      <input type="number" role="number" value={number} />
+      <input type="number" role="number" value={number} readOnly />
+      {/* 경고: 'onChange' 처리기가 없는 양식 필드에 'value' 
+      요소를 제공했습니다. 읽기 전용 필드가 렌더링됩니다. 필드를
+       변경할 수 있어야 하는 경우 'defaultValue'를 사용하십시오.
+        그렇지 않으면 'OnChange' 또는 'readOnly'를 설정하십시오.*/}
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button onClick={number3Click}>3</button>
