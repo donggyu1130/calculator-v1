@@ -894,3 +894,47 @@ test('시나리오 43번 (2)', () => {
   fireEvent.click(buttonEqual);
   expect(number).toHaveValue(99);
 });
+
+test('시나리오 44번', () => {
+  render(<App />);
+
+  const number = screen.getByRole('number');
+  expect(number).toBeInTheDocument();
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+  
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText('+');
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText('=');
+  expect(buttonEqual).toBeInTheDocument();
+
+  // => 1을 누른다-1이 출력됨
+  //  +를 누른다-1이 출력됨
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(1);
+
+  //  2를 누른다-2가 출력됨
+  //  =을 누른다-3이 출력됨
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(3);
+
+  //  +를 누른다-3이 출력됨
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(3);
+
+  //  1을 누른다-1이 출력됨
+  //  =으르 누른다-4가 출력됨
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(4);
+});
