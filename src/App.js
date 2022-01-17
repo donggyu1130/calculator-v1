@@ -14,7 +14,6 @@ function App() {
   //가장 최근에 클릭된 버튼이 저장된다
 
   const [plusclicked, setPlusclicked] = useState(false);
-
   //+가 눌렸는지 안눌렸는지 저장된다:이게 필요한 이유는 이게 없으면 계산이 안되는데 눌린후와 이전의 값에 구분이 안간다
   //false일때는 conclusion1,true일때는 conclusion2에 저장된다
   //우리가 지금 plusClicked를 보고있는 이유:-를 추가해야하기때문에 +와 구분하기 위해
@@ -125,37 +124,39 @@ function App() {
 
   /**
    * 연산버튼+를 클릭했을때 lastbutton에 +라는 값을 넣어준다
+   * 연산버튼+를 클릭했을때 lastoperator에 +라는 값을 넣어서 =버튼을 클릭할때 사용한다
    * 숫자버튼을 여러번눌러 2자리수 이상을 만들때 구분을 해준다
    */
   function plusClick() {
     setLastbutton("+");
+    setLastoperator("+");
     setPlusclicked(true);
     setNumber(Number(conclusion1) + Number(conclusion2)); //실제로 게산되는 부분
 
     //conclusion1,2의 값의 계산결과를 1에 넣고 2를 비워준다=>연산버튼을 여러번 눌러도 계산이 가능하게 해준다
     setConclusion1(Number(conclusion1) + Number(conclusion2));
     setConclusion2(0);
-    setLastoperator("+");
   }
 
   /**
    * 연산버튼-를 클릭했을때 lastbutton에 -라는 값을 넣어준다
+   * 연산버튼-를 클릭했을때 lastoperator에 -라는 값을 넣어서 =버튼을 클릭할때 사용한다
    * 숫바저튼을 여러번 눌러 2자리수 이상을 만들때 구분을 해준다
    */
   function minusClick() {
     setLastbutton("-");
+    setLastoperator("-");
     setPlusclicked(true);
     setNumber(Number(conclusion1) - Number(conclusion2));
 
     setConclusion1(Number(conclusion1) - Number(conclusion2));
     setConclusion2(0);
-    setLastoperator("-");
   }
 
   /**
    * 연산버튼=을 클릭했을때 conclusion값을 인풋안에 연산 결과로 출력
-   * 연산버튼+를 클릭했을때 lastbutton에 =이라는 값을 넣어준다
-   * conslusion1과conslusion2를 더해준다
+   * conslusion1과conslusion2를 더하거나 빼준다.
+   * lastoperator의 값을 참고해서 conclusion1,2를 더하거나 빼준다
    */
   function equalClick() {
     //우리가 기대하기로는 lastbutton은 +이거나 -일것이라고 기대했다
