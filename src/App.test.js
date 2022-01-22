@@ -1823,3 +1823,17 @@ test("시나리오 60번", () => {
   const button4 = screen.getByText(4);
   expect(button4).toBeInTheDocument();
 });
+
+test("시나리오 61번", () => {
+  render(<App />);
+
+  const button4 = screen.getByText(4);
+  expect(button4).toBeInTheDocument();
+
+  const number = screen.getByRole("number");
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button4);
+  expect(number).toHaveValue(4);
+  // 4를 누른다-4가 출력됨
+});

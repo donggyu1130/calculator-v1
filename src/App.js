@@ -122,6 +122,10 @@ function App() {
     }
   }
 
+  function number4Click() {
+    setNumber(4);
+  }
+
   /**
    * 연산버튼+를 클릭했을때 lastbutton에 +라는 값을 넣어준다
    * 연산버튼+를 클릭했을때 lastoperator에 +라는 값을 넣어서 =버튼을 클릭할때 사용한다
@@ -201,7 +205,7 @@ function App() {
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button onClick={number3Click}>3</button>
-      <button>4</button>
+      <button onClick={number4Click}>4</button>
       <button onClick={plusClick}>+</button>
       <button onClick={minusClick}>-</button>
       <button onClick={equalClick}>=</button>
