@@ -1117,3 +1117,68 @@ test("시나리오 52번", () => {
   expect(number).toHaveValue(3);
   // '='을 누른다-3이 출력됨
 });
+
+test("시나리오 53번", () => {
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const button3 = screen.getByText(3);
+  expect(button3).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText("+");
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonMinus = screen.getByText("-");
+  expect(buttonMinus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText("=");
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole("number");
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(buttonMinus);
+  expect(number).toHaveValue(0);
+  // -를 누른다-변화 없음
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  // 2를 누른다-2가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22);
+  // 2를 누른다-22가 출력됨
+
+  fireEvent.click(buttonMinus);
+  expect(number).toHaveValue(-22);
+  // -를 누른다-'-'22가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  // 2를 누른다-2가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22);
+  // 2를 누른다-22가 출력됨
+
+  fireEvent.click(buttonMinus);
+  expect(number).toHaveValue(-44);
+  // -를 누른다-'-'44가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  // 2를 누른다-2가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22);
+  // 2를 누른다-22가 출력됨
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(-66);
+  // =을 누른다-'-'66이 출력됨
+});
