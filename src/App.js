@@ -131,10 +131,20 @@ function App() {
     setLastbutton("+");
     setLastoperator("+");
     setPlusclicked(true);
-    setNumber(Number(conclusion1) + Number(conclusion2)); //실제로 게산되는 부분
+    if (lastoperator === "+") {
+      setNumber(Number(conclusion1) + Number(conclusion2));
+      setConclusion1(Number(conclusion1) + Number(conclusion2));
+    } else if (lastoperator === "-") {
+      setNumber(Number(conclusion1) - Number(conclusion2));
+      setConclusion1(Number(conclusion1) - Number(conclusion2));
+    }
+    // setNumber(Number(conclusion1) - Number(conclusion2)); //실제로 게산되는 부분
+    // //어떨때는 +로 계산되야하고 어떨때는 -로 계산되야 한다
+    // //1.+로 계산되야 하는 경우:lastoperator가 +인 경우
+    // //2.-로 계산되야 하는 경우:lastoperator가 -인 경우
 
-    //conclusion1,2의 값의 계산결과를 1에 넣고 2를 비워준다=>연산버튼을 여러번 눌러도 계산이 가능하게 해준다
-    setConclusion1(Number(conclusion1) + Number(conclusion2));
+    // //conclusion1,2의 값의 계산결과를 1에 넣고 2를 비워준다=>연산버튼을 여러번 눌러도 계산이 가능하게 해준다
+    // setConclusion1(Number(conclusion1) + Number(conclusion2));
     setConclusion2(0);
   }
 
