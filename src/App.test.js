@@ -1697,55 +1697,55 @@ test("시나리오 59번", () => {
   // 1을 누른다-1111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(11111);
+  expect(number).toHaveValue(1_1111);
   // 1을 누른다-11111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(111111);
+  expect(number).toHaveValue(11_1111);
   // 1을 누른다-111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(1111111);
+  expect(number).toHaveValue(111_1111);
   // 1을 누른다-1111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(11111111);
+  expect(number).toHaveValue(1111_1111);
   // 1을 누른다-11111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(111111111); //1억
+  expect(number).toHaveValue(1_1111_1111); //1억
   // 1을 누른다-111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(1111111111);
+  expect(number).toHaveValue(11_1111_1111);
   // 1을 누른다-1111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(11111111111);
+  expect(number).toHaveValue(111_1111_1111);
   // 1을 누른다-11111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(111111111111); //1000억
+  expect(number).toHaveValue(1111_1111_1111); //1000억
   // 1을 누른다-111111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(1111111111111);
+  expect(number).toHaveValue(1_1111_1111_1111);
   // 1을 누른다-1111111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(11111111111111);
+  expect(number).toHaveValue(11_1111_1111_1111);
   // 1을 누른다-11111111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(111111111111111);
+  expect(number).toHaveValue(111_1111_1111_1111);
   // 1을 누른다-111111111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(1111111111111111); //1000조
+  expect(number).toHaveValue(1111_1111_1111_1111); //1000조
   // 1을 누른다-1111111111111111이 출력됨
 
   fireEvent.click(buttonMinus);
-  expect(number).toHaveValue(1111111111111111);
+  expect(number).toHaveValue(1111_1111_1111_1111);
   // '-'를 누른다-변화 없음
 
   fireEvent.click(button2);
