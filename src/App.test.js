@@ -1491,6 +1491,328 @@ test("시나리오 58번", () => {
   // 1을 누른다-111111111111111이 출력됨
 
   fireEvent.click(button1);
-  expect(number).toHaveValue(1111111111111111);
+  expect(number).toHaveValue(1111111111111111); //1000조
   // 1을 누른다-1111111111111111이 출력됨
+});
+
+test("시나리오 59번", () => {
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const button3 = screen.getByText(3);
+  expect(button3).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText("+");
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonMinus = screen.getByText("-");
+  expect(buttonMinus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText("=");
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole("number");
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+  // 1을 누른다-1이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+  // 1을 누른다-11이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111);
+  // 1을 누른다-111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111);
+  // 1을 누른다-1111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111);
+  // 1을 누른다-11111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111);
+  // 1을 누른다-111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111);
+  // 1을 누른다-1111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111);
+  // 1을 누른다-11111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111); //1억
+  // 1을 누른다-111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111);
+  // 1을 누른다-1111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111111);
+  // 1을 누른다-11111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111111); //1000억
+  // 1을 누른다-111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111111);
+  // 1을 누른다-1111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111111111);
+  // 1을 누른다-11111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111111111);
+  // 1을 누른다-111111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111111111); //1000조
+  // 1을 누른다-1111111111111111이 출력됨
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(1111111111111111);
+  //'+'를 누른다-변화 없음
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+  // 1을 누른다-1이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+  // 1을 누른다-11이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111);
+  // 1을 누른다-111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111);
+  // 1을 누른다-1111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111);
+  // 1을 누른다-11111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111);
+  // 1을 누른다-111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111);
+  // 1을 누른다-1111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111);
+  // 1을 누른다-11111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111); //1억
+  // 1을 누른다-111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111);
+  // 1을 누른다-1111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111111);
+  // 1을 누른다-11111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111111); //1000억
+  // 1을 누른다-111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111111);
+  // 1을 누른다-1111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111111111);
+  // 1을 누른다-11111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111111111);
+  // 1을 누른다-111111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111111111); //1000조
+  // 1을 누른다-1111111111111111이 출력됨
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(2222222222222222);
+  //'='을 누른다-2222222222222222이 출력됨
+});
+
+test("시나리오 59번", () => {
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const button3 = screen.getByText(3);
+  expect(button3).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText("+");
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonMinus = screen.getByText("-");
+  expect(buttonMinus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText("=");
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole("number");
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+  // 1을 누른다-1이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11);
+  // 1을 누른다-11이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111);
+  // 1을 누른다-111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111);
+  // 1을 누른다-1111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111);
+  // 1을 누른다-11111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111);
+  // 1을 누른다-111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111);
+  // 1을 누른다-1111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111);
+  // 1을 누른다-11111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111); //1억
+  // 1을 누른다-111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111);
+  // 1을 누른다-1111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111111);
+  // 1을 누른다-11111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111111); //1000억
+  // 1을 누른다-111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111111);
+  // 1을 누른다-1111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(11111111111111);
+  // 1을 누른다-11111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(111111111111111);
+  // 1을 누른다-111111111111111이 출력됨
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1111111111111111); //1000조
+  // 1을 누른다-1111111111111111이 출력됨
+
+  fireEvent.click(buttonMinus);
+  expect(number).toHaveValue(1111111111111111);
+  // '-'를 누른다-변화 없음
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  // 2를 누른다-2가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22);
+  // 2를 누른다-22가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(222);
+  // 2를 누른다-222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2222);
+  // 2를 누른다-2222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22222);
+  // 2를 누른다-22222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(222222);
+  // 2를 누른다-222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2222222);
+  // 2를 누른다-2222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22222222);
+  // 2를 누른다-22222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(222222222);
+  // 2를 누른다-222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2222222222);
+  // 2를 누른다-2222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22222222222);
+  // 2를 누른다-22222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(222222222222);
+  // 2를 누른다-222222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2222222222222);
+  // 2를 누른다-2222222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(22222222222222);
+  // 2를 누른다-22222222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(222222222222222);
+  // 2를 누른다-222222222222222가 출력됨
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2222222222222222);
+  // 2를 누른다-2222222222222222가 출력됨
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(-1111111111111111);
+  // '='을 누른다-'-'1111111111111111이 출력됨
 });
