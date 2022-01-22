@@ -969,3 +969,47 @@ test("시나리오 46번", () => {
   expect(number).toHaveValue(2);
   // '='을 누른다'-'2가 출력됨
 });
+
+//   -를 누른다-변화 없음
+//   2를 누른다-2가 출력됨
+//   =을 누른다=-1이 출력됨
+test("시나리오 49번", () => {
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const button3 = screen.getByText(3);
+  expect(button3).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText("+");
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonMinus = screen.getByText("-");
+  expect(buttonMinus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText("=");
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole("number");
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button1);
+  expect(number).toHaveValue(1);
+  // 1을 누른다-1이 출력됨
+
+  fireEvent.click(buttonMinus);
+  expect(number).toHaveValue(1);
+  //   -를 누른다-변화 없음
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  //   2를 누른다-2가 출력됨
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(-1);
+  //   =을 누른다=-1이 출력됨
+});
