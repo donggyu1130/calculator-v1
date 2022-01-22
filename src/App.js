@@ -201,6 +201,7 @@ function App() {
       <button onClick={number1Click}>1</button>
       <button onClick={number2Click}>2</button>
       <button onClick={number3Click}>3</button>
+      <button>4</button>
       <button onClick={plusClick}>+</button>
       <button onClick={minusClick}>-</button>
       <button onClick={equalClick}>=</button>

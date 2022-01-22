@@ -1816,3 +1816,10 @@ test("시나리오 59번", () => {
   expect(number).toHaveValue(-1111111111111111);
   // '='을 누른다-'-'1111111111111111이 출력됨
 });
+
+test("시나리오 60번", () => {
+  render(<App />);
+
+  const button4 = screen.getByText(4);
+  expect(button4).toBeInTheDocument();
+});
