@@ -1060,3 +1060,60 @@ test("시나리오 50번", () => {
   expect(number).toHaveValue(0);
   // '='을 누른다-0이 출력됨
 });
+
+// =>2를 누른다-2가 출력됨
+// '+'를 누른다-변화없음
+// 3을 누른다-3이 출력됨
+// '-'를 누른다-5가 출력됨
+// 2를 누른다-2가 출력됨
+// '='을 누른다-3이 출력됨
+
+test("시나리오 52번", () => {
+  render(<App />);
+
+  const button1 = screen.getByText(1);
+  expect(button1).toBeInTheDocument();
+
+  const button2 = screen.getByText(2);
+  expect(button2).toBeInTheDocument();
+
+  const button3 = screen.getByText(3);
+  expect(button3).toBeInTheDocument();
+
+  const buttonPlus = screen.getByText("+");
+  expect(buttonPlus).toBeInTheDocument();
+
+  const buttonMinus = screen.getByText("-");
+  expect(buttonMinus).toBeInTheDocument();
+
+  const buttonEqual = screen.getByText("=");
+  expect(buttonEqual).toBeInTheDocument();
+
+  const number = screen.getByRole("number");
+  expect(number).toBeInTheDocument();
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  // =>2를 누른다-2가 출력됨
+
+  fireEvent.click(buttonPlus);
+  expect(number).toHaveValue(2);
+  // '+'를 누른다-변화없음
+
+  fireEvent.click(button3);
+  expect(number).toHaveValue(3);
+  // 3을 누른다-3이 출력됨
+
+  fireEvent.click(buttonMinus);
+  expect(number).toHaveValue(5);
+  // '-'를 누른다-5가 출력됨
+  //-를 눌렀을때 5가 나올줄 알았지만 -1이 나왔다
+
+  fireEvent.click(button2);
+  expect(number).toHaveValue(2);
+  // 2를 누른다-2가 출력됨
+
+  fireEvent.click(buttonEqual);
+  expect(number).toHaveValue(3);
+  // '='을 누른다-3이 출력됨
+});

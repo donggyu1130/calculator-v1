@@ -158,9 +158,15 @@ function App() {
     setLastbutton("-");
     setLastoperator("-");
     setPlusclicked(true);
-    setNumber(Number(conclusion1) - Number(conclusion2));
 
-    setConclusion1(Number(conclusion1) - Number(conclusion2));
+    if (lastoperator === "+") {
+      setNumber(Number(conclusion1) + Number(conclusion2));
+      setConclusion1(Number(conclusion1) + Number(conclusion2));
+    } else if (lastoperator === "-") {
+      setNumber(Number(conclusion1) - Number(conclusion2));
+      setConclusion1(Number(conclusion1) - Number(conclusion2));
+    }
+
     setConclusion2(0);
   }
 
